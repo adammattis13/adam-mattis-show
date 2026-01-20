@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Adam Mattis Show — Coming Soon</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LPMFJTRBE5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LPMFJTRBE5');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -84,32 +92,83 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .coming-soon {
+        .launch-date {
             margin-top: 50px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             animation: fadeUp 1s ease-out 0.3s both;
         }
 
-        .coming-soon .dot {
-            width: 8px;
-            height: 8px;
-            background: var(--accent);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.2); }
-        }
-
-        .coming-soon span {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.2rem;
-            letter-spacing: 0.3em;
+        .launch-label {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
             color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .launch-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.5rem;
+            letter-spacing: 0.15em;
+            color: var(--text-primary);
+            text-shadow: 0 0 30px var(--accent-glow);
+        }
+
+        .platform-links {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            animation: fadeUp 1s ease-out 0.5s both;
+        }
+
+        .listen-label {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .platform-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .platform-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+
+        .platform-link:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .platform-link.disabled {
+            cursor: default;
+            opacity: 0.3;
+        }
+
+        .platform-link.disabled:hover {
+            opacity: 0.3;
+            transform: none;
+        }
+
+        .platform-link img {
+            height: 40px;
+            width: auto;
         }
 
         footer {
@@ -122,7 +181,7 @@
             font-size: 0.75rem;
             color: var(--text-secondary);
             letter-spacing: 0.1em;
-            animation: fadeUp 1s ease-out 0.5s both;
+            animation: fadeUp 1s ease-out 0.7s both;
         }
 
         footer a {
@@ -154,8 +213,16 @@
                 max-width: 280px;
             }
 
-            .coming-soon span {
-                font-size: 1rem;
+            .launch-number {
+                font-size: 2.5rem;
+            }
+
+            .platform-icons {
+                gap: 24px;
+            }
+
+            .platform-link img {
+                height: 34px;
             }
         }
     </style>
@@ -167,9 +234,24 @@
         <img src="assets/Logo.png" alt="The Adam Mattis Show">
     </div>
 
-    <div class="coming-soon">
-        <span class="dot"></span>
-        <span>Coming Soon</span>
+    <div class="launch-date">
+        <span class="launch-label">Launching</span>
+        <span class="launch-number">02.02.2025</span>
+    </div>
+
+    <div class="platform-links">
+        <span class="listen-label">Listen On</span>
+        <div class="platform-icons">
+            <a href="https://www.youtube.com/@TheAdamMattisShow" target="_blank" class="platform-link" title="YouTube">
+                <img src="assets/youtube.png" alt="YouTube">
+            </a>
+            <span class="platform-link disabled" title="Spotify - Coming Soon">
+                <img src="assets/Spotify.png" alt="Spotify">
+            </span>
+            <span class="platform-link disabled" title="Apple Podcasts - Coming Soon">
+                <img src="assets/podcasts.png" alt="Apple Podcasts">
+            </span>
+        </div>
     </div>
 
     <footer>

@@ -62,7 +62,7 @@
         .hero-art { position: relative; }
         .cover { position: relative; aspect-ratio: 1; background: #070707; border: 1px solid rgba(255,255,255,.16); box-shadow: 28px 34px 0 var(--red-dark), 0 34px 100px rgba(0,0,0,.65); overflow: hidden; }
         .cover::before { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 45%, rgba(226,55,63,.15)); }
-        .cover img { position: relative; width: 100%; height: 100%; object-fit: contain; }
+        .cover img { position: relative; width: 100%; height: 100%; object-fit: cover; }
         .episode-tag { position: absolute; right: -28px; top: 34px; padding: 10px 16px; background: var(--white); color: var(--black); font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; transform: rotate(3deg); }
         section { padding: 110px 0; }
         .section-head { display: grid; grid-template-columns: .75fr 1.25fr; gap: 60px; margin-bottom: 52px; }
@@ -140,7 +140,7 @@
                     </div>
                 </div>
                 <div class="hero-art reveal delay-1">
-                    <div class="cover"><img src="assets/Logo.png" alt="The Adam Mattis Show cover art"></div>
+                    <div class="cover"><img src="assets/adam-recording.jpeg" alt="Adam Mattis recording the show"></div>
                     <span class="episode-tag">Pull up a chair</span>
                 </div>
             </div>

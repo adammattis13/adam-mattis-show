@@ -38,7 +38,8 @@
         .shell { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
         .site-header { position: absolute; inset: 0 0 auto; z-index: 10; padding: 24px 0; }
         .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-        .wordmark { font-family: "Bebas Neue", sans-serif; font-size: 1.4rem; letter-spacing: .08em; text-decoration: none; }
+        .wordmark { display: inline-flex; align-items: center; gap: 12px; font-family: "Bebas Neue", sans-serif; font-size: 1.4rem; letter-spacing: .08em; text-decoration: none; }
+        .brand-mark { width: 48px; height: 48px; object-fit: contain; }
         .nav-links { display: flex; align-items: center; gap: 28px; }
         .nav-links a { color: var(--muted); font-size: .84rem; font-weight: 600; letter-spacing: .09em; text-decoration: none; text-transform: uppercase; transition: color .2s ease; }
         .nav-links a:hover, .nav-links a:focus-visible { color: var(--white); }
@@ -79,6 +80,7 @@
         .listen-grid { display: grid; grid-template-columns: minmax(260px, .65fr) minmax(0, 1.35fr); gap: 70px; align-items: center; }
         .listen h2 { margin-bottom: 22px; font-size: clamp(3.2rem, 7vw, 5.8rem); }
         .listen-copy > p { color: var(--muted); }
+        .listen-logo { width: 118px; margin: 0 0 28px; opacity: .96; }
         .platforms { display: flex; flex-direction: column; gap: 10px; margin-top: 30px; }
         .platform { display: flex; align-items: center; gap: 14px; width: fit-content; color: var(--white); font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
         .platform img { width: 26px; height: 26px; object-fit: contain; opacity: .88; }
@@ -106,6 +108,8 @@
         }
         @media (max-width: 580px) {
             .shell { width: min(calc(100% - 28px), var(--max)); }
+            .brand-mark { width: 40px; height: 40px; }
+            .wordmark span { display: none; }
             .nav-links a:first-child { display: none; }
             .nav-links { gap: 18px; }
             .nav-links a { font-size: .75rem; }
@@ -123,7 +127,7 @@
 <body>
     <header class="site-header">
         <nav class="nav shell" aria-label="Main navigation">
-            <a class="wordmark" href="#top">The Adam Mattis Show</a>
+            <a class="wordmark" href="#top"><img class="brand-mark" src="assets/Logo.png" alt=""><span>The Adam Mattis Show</span></a>
             <div class="nav-links"><a href="#about">About</a><a href="#listen">Listen</a></div>
         </nav>
     </header>
@@ -163,6 +167,7 @@
         <section class="listen" id="listen" aria-labelledby="listen-title">
             <div class="listen-grid shell">
                 <div class="listen-copy">
+                    <img class="listen-logo" src="assets/Logo.png" alt="The Adam Mattis Show">
                     <p class="eyebrow">Latest from the show</p>
                     <h2 id="listen-title">Pick a platform. Press play.</h2>
                     <p>Follow the show wherever you listen so the next conversation finds you.</p>

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Adam Mattis Show features open, long-format conversations with fascinating people, plus quick Car Talk episodes you can put to work today.">
+    <meta name="theme-color" content="#090909">
     <title>The Adam Mattis Show</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LPMFJTRBE5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -15,243 +16,171 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0a0a0a;
-            --text-primary: #ffffff;
-            --text-secondary: #666666;
-            --accent: #e63946;
-            --accent-glow: rgba(230, 57, 70, 0.25);
+            --black: #090909;
+            --panel: #121212;
+            --panel-hover: #171717;
+            --white: #f7f5f2;
+            --muted: #aaa6a1;
+            --line: rgba(255, 255, 255, 0.13);
+            --red: #e2373f;
+            --red-dark: #a91d27;
+            --max: 1180px;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; background: var(--black); color: var(--white); font-family: "Work Sans", sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+        body::before { content: ""; position: fixed; inset: 0; z-index: 20; pointer-events: none; opacity: .025; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+        a { color: inherit; }
+        img { display: block; max-width: 100%; }
+        .shell { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+        .site-header { position: absolute; inset: 0 0 auto; z-index: 10; padding: 24px 0; }
+        .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+        .wordmark { font-family: "Bebas Neue", sans-serif; font-size: 1.4rem; letter-spacing: .08em; text-decoration: none; }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { color: var(--muted); font-size: .84rem; font-weight: 600; letter-spacing: .09em; text-decoration: none; text-transform: uppercase; transition: color .2s ease; }
+        .nav-links a:hover, .nav-links a:focus-visible { color: var(--white); }
+        .hero { position: relative; min-height: 760px; display: grid; align-items: center; padding: 132px 0 88px; border-bottom: 1px solid var(--line); overflow: hidden; }
+        .hero::after { content: ""; position: absolute; width: 620px; height: 620px; right: -150px; bottom: -240px; border-radius: 50%; background: var(--red); filter: blur(130px); opacity: .14; }
+        .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(340px, .88fr); align-items: center; gap: clamp(48px, 8vw, 110px); }
+        .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 22px; color: var(--muted); font-size: .79rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+        .eyebrow::before { content: ""; width: 34px; height: 2px; background: var(--red); }
+        h1, h2, h3, p { margin-top: 0; }
+        h1, h2, h3 { font-family: "Bebas Neue", sans-serif; font-weight: 400; line-height: .94; }
+        h1 { margin-bottom: 24px; font-size: clamp(4.2rem, 9vw, 8rem); letter-spacing: -.01em; }
+        h1 span { color: var(--red); }
+        .hero-copy { max-width: 660px; }
+        .hero-copy > p:not(.eyebrow) { max-width: 610px; color: #cbc7c2; font-size: clamp(1.05rem, 1.4vw, 1.22rem); }
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+        .button { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 20px; border: 1px solid transparent; background: var(--red); color: white; font-size: .86rem; font-weight: 600; letter-spacing: .07em; text-decoration: none; text-transform: uppercase; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+        .button:hover { background: #f0444d; transform: translateY(-2px); }
+        .button.secondary { background: transparent; border-color: var(--line); }
+        .button.secondary:hover { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.3); }
+        .button svg { width: 18px; height: 18px; fill: currentColor; }
+        .hero-art { position: relative; }
+        .cover { position: relative; aspect-ratio: 1; background: #070707; border: 1px solid rgba(255,255,255,.16); box-shadow: 28px 34px 0 var(--red-dark), 0 34px 100px rgba(0,0,0,.65); overflow: hidden; }
+        .cover::before { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 45%, rgba(226,55,63,.15)); }
+        .cover img { position: relative; width: 100%; height: 100%; object-fit: contain; }
+        .episode-tag { position: absolute; right: -28px; top: 34px; padding: 10px 16px; background: var(--white); color: var(--black); font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; transform: rotate(3deg); }
+        section { padding: 110px 0; }
+        .section-head { display: grid; grid-template-columns: .75fr 1.25fr; gap: 60px; margin-bottom: 52px; }
+        .section-head h2 { margin: 0; font-size: clamp(3rem, 6vw, 5.2rem); }
+        .section-intro { max-width: 660px; color: #c5c1bc; font-size: 1.08rem; }
+        .section-intro p:last-child { margin-bottom: 0; }
+        .formats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .format-card { position: relative; min-height: 250px; padding: 34px; background: var(--panel); border: 1px solid var(--line); overflow: hidden; transition: transform .25s ease, background .25s ease; }
+        .format-card:hover { transform: translateY(-4px); background: var(--panel-hover); }
+        .format-number { position: absolute; right: 22px; top: 8px; color: rgba(255,255,255,.055); font-family: "Bebas Neue", sans-serif; font-size: 7rem; line-height: 1; }
+        .format-card h3 { margin: 44px 0 12px; font-size: 2.3rem; }
+        .format-card p { max-width: 480px; margin: 0; color: var(--muted); }
+        .listen { background: #101010; border-block: 1px solid var(--line); }
+        .listen-grid { display: grid; grid-template-columns: minmax(260px, .65fr) minmax(0, 1.35fr); gap: 70px; align-items: center; }
+        .listen h2 { margin-bottom: 22px; font-size: clamp(3.2rem, 7vw, 5.8rem); }
+        .listen-copy > p { color: var(--muted); }
+        .platforms { display: flex; flex-direction: column; gap: 10px; margin-top: 30px; }
+        .platform { display: flex; align-items: center; gap: 14px; width: fit-content; color: var(--white); font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+        .platform img { width: 26px; height: 26px; object-fit: contain; opacity: .88; }
+        .platform span { border-bottom: 1px solid transparent; }
+        .platform:hover span { border-color: var(--white); }
+        .spotify-frame { min-width: 0; padding: 12px; background: #080808; border: 1px solid var(--line); }
+        .spotify-frame iframe { display: block; width: 100%; min-height: 352px; border: 0; border-radius: 0; }
+        footer { padding: 34px 0 40px; }
+        .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; color: #817e7a; font-size: .76rem; letter-spacing: .05em; }
+        .producer { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .producer img { width: 98px; height: auto; opacity: .7; }
+        .producer:hover { color: var(--white); }
+        .reveal { opacity: 0; transform: translateY(18px); animation: reveal .7s ease forwards; }
+        .delay-1 { animation-delay: .12s; }
+        @keyframes reveal { to { opacity: 1; transform: none; } }
+        :focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+        @media (max-width: 860px) {
+            .hero { min-height: 0; padding-top: 130px; }
+            .hero-grid, .section-head, .listen-grid { grid-template-columns: 1fr; }
+            .hero-grid { gap: 70px; }
+            .hero-art { width: min(88%, 480px); margin-inline: auto; }
+            .section-head, .listen-grid { gap: 28px; }
+            .formats { grid-template-columns: 1fr; }
         }
-
-        body {
-            font-family: 'Work Sans', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        /* Noise texture */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
-            opacity: 0.03;
-            pointer-events: none;
-            z-index: 1000;
-        }
-
-        /* Accent line */
-        .accent-line {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), #ff6b6b, var(--accent));
-            background-size: 200% 100%;
-            animation: shimmer 3s ease-in-out infinite;
-        }
-
-        @keyframes shimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .logo-container {
-            max-width: 420px;
-            width: 90%;
-            animation: fadeUp 1s ease-out;
-        }
-
-        .logo-container img {
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 0 50px var(--accent-glow));
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .launch-date {
-            margin-top: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            animation: fadeUp 1s ease-out 0.3s both;
-        }
-
-        .launch-number {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.8rem;
-            letter-spacing: 0.1em;
-            color: var(--text-primary);
-            text-shadow: 0 0 30px var(--accent-glow);
-        }
-
-        .platform-links {
-            margin-top: 40px;
-            margin-bottom: 100px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-            animation: fadeUp 1s ease-out 0.5s both;
-        }
-
-        .listen-label {
-            font-family: 'Work Sans', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 300;
-            letter-spacing: 0.2em;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-        }
-
-        .platform-icons {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .platform-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0.6;
-            transition: all 0.3s ease;
-        }
-
-        .platform-link:hover {
-            opacity: 1;
-            transform: scale(1.1);
-        }
-
-        .platform-link.disabled {
-            cursor: default;
-            opacity: 0.3;
-        }
-
-        .platform-link.disabled:hover {
-            opacity: 0.3;
-            transform: none;
-        }
-
-        .platform-link img {
-            height: 40px;
-            width: auto;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            letter-spacing: 0.1em;
-            animation: fadeUp 1s ease-out 0.7s both;
-        }
-
-        footer a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: var(--text-primary);
-        }
-
-        footer a img {
-            height: 18px;
-            width: auto;
-            opacity: 0.6;
-            transition: opacity 0.3s ease;
-        }
-
-        footer a:hover img {
-            opacity: 1;
-        }
-
-        @media (max-width: 480px) {
-            .logo-container {
-                max-width: 280px;
-            }
-
-            .launch-number {
-                font-size: 2rem;
-            }
-
-            .platform-icons {
-                gap: 24px;
-            }
-
-            .platform-link img {
-                height: 34px;
-            }
+        @media (max-width: 580px) {
+            .shell { width: min(calc(100% - 28px), var(--max)); }
+            .nav-links a:first-child { display: none; }
+            .nav-links { gap: 18px; }
+            .nav-links a { font-size: .75rem; }
+            .hero { padding-bottom: 72px; }
+            h1 { font-size: clamp(4rem, 21vw, 6rem); }
+            section { padding: 78px 0; }
+            .cover { box-shadow: 15px 18px 0 var(--red-dark), 0 30px 70px rgba(0,0,0,.65); }
+            .episode-tag { right: -10px; top: 22px; }
+            .format-card { padding: 26px; }
+            .spotify-frame { padding: 6px; }
+            .footer-inner { align-items: flex-start; flex-direction: column; }
         }
     </style>
 </head>
 <body>
-    <div class="accent-line"></div>
-
-    <div class="logo-container">
-        <img src="assets/Logo.png" alt="The Adam Mattis Show">
-    </div>
-
-    <div class="launch-date">
-        <span class="launch-number">New Episodes Live NOW!</span>
-    </div>
-
-    <div class="platform-links">
-        <span class="listen-label">Listen On</span>
-        <div class="platform-icons">
-            <a href="https://www.youtube.com/@TheAdamMattisShow" target="_blank" class="platform-link" title="YouTube">
-                <img src="assets/youtube.png" alt="YouTube">
-            </a>
-            <a href="https://open.spotify.com/show/3jeoIr2jjqOekjklIsbFDz" target="_blank" class="platform-link" title="Spotify">
-                <img src="assets/Spotify.png" alt="Spotify">
-            </a>
-            <a href="https://podcasts.apple.com/us/podcast/the-adam-mattis-show/id1870415107" target="_blank" class="platform-link" title="Apple Podcasts">
-                <img src="assets/podcasts.png" alt="Apple Podcasts">
-            </a>
-        </div>
-    </div>
-
+    <header class="site-header">
+        <nav class="nav shell" aria-label="Main navigation">
+            <a class="wordmark" href="#top">The Adam Mattis Show</a>
+            <div class="nav-links"><a href="#about">About</a><a href="#listen">Listen</a></div>
+        </nav>
+    </header>
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-grid shell">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">New episodes twice a week</p>
+                    <h1 id="hero-title">No topic<br><span>off-limits.</span></h1>
+                    <p>Open, long-format conversations with fascinating people from every corner of life. Raw stories, hard lessons, and the weird angles worth following.</p>
+                    <div class="actions">
+                        <a class="button" href="https://open.spotify.com/show/3jeoIr2jjqOekjklIsbFDz" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5a10.5 10.5 0 1 0 0 21 10.5 10.5 0 0 0 0-21Zm4.815 15.14a.655.655 0 0 1-.9.218c-2.465-1.507-5.57-1.848-9.225-1.012a.656.656 0 0 1-.292-1.279c4.001-.914 7.434-.521 10.198 1.168.31.19.408.595.219.905Zm1.287-2.863a.821.821 0 0 1-1.129.27c-2.823-1.734-7.126-2.236-10.464-1.223a.82.82 0 1 1-.476-1.57c3.815-1.157 8.557-.597 11.799 1.395a.82.82 0 0 1 .27 1.128Zm.11-2.981C14.826 8.785 9.24 8.6 6.008 9.578a.984.984 0 1 1-.57-1.884c3.71-1.124 9.886-.906 13.778 1.404a.984.984 0 0 1-1.004 1.698Z"/></svg>Listen on Spotify</a>
+                        <a class="button secondary" href="#listen">More ways to listen</a>
+                    </div>
+                </div>
+                <div class="hero-art reveal delay-1">
+                    <div class="cover"><img src="assets/Logo.png" alt="The Adam Mattis Show cover art"></div>
+                    <span class="episode-tag">Pull up a chair</span>
+                </div>
+            </div>
+        </section>
+        <section id="about" aria-labelledby="about-title">
+            <div class="shell">
+                <div class="section-head">
+                    <div><p class="eyebrow">The show</p><h2 id="about-title">Interesting people. Honest conversations.</h2></div>
+                    <div class="section-intro">
+                        <p>Adam sits down with entrepreneurs, executives, artists, thinkers, and everyday badasses who have lived through some wild stuff. The conversations go deep into leadership, business, resilience, culture, and life.</p>
+                        <p>No canned answers. No tidy little box. Just curiosity, candor, and enough time to get somewhere worth going.</p>
+                    </div>
+                </div>
+                <div class="formats">
+                    <article class="format-card"><span class="format-number" aria-hidden="true">01</span><h3>Long-format conversations</h3><p>Unrestricted discussions with people worth knowing, built around their stories, ideas, and lessons earned the hard way.</p></article>
+                    <article class="format-card"><span class="format-number" aria-hidden="true">02</span><h3>Car Talk</h3><p>Short, direct episodes with one practical thought to help you be a little bit better today.</p></article>
+                </div>
+            </div>
+        </section>
+        <section class="listen" id="listen" aria-labelledby="listen-title">
+            <div class="listen-grid shell">
+                <div class="listen-copy">
+                    <p class="eyebrow">Latest from the show</p>
+                    <h2 id="listen-title">Pick a platform. Press play.</h2>
+                    <p>Follow the show wherever you listen so the next conversation finds you.</p>
+                    <div class="platforms">
+                        <a class="platform" href="https://open.spotify.com/show/3jeoIr2jjqOekjklIsbFDz" target="_blank" rel="noopener noreferrer"><img src="assets/Spotify.png" alt=""><span>Spotify</span></a>
+                        <a class="platform" href="https://podcasts.apple.com/us/podcast/the-adam-mattis-show/id1870415107" target="_blank" rel="noopener noreferrer"><img src="assets/podcasts.png" alt=""><span>Apple Podcasts</span></a>
+                        <a class="platform" href="https://www.youtube.com/@TheAdamMattisShow" target="_blank" rel="noopener noreferrer"><img src="assets/youtube.png" alt=""><span>YouTube</span></a>
+                    </div>
+                </div>
+                <div class="spotify-frame"><iframe src="https://open.spotify.com/embed/show/3jeoIr2jjqOekjklIsbFDz?utm_source=generator&theme=0" title="Listen to The Adam Mattis Show on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2026 The Adam Mattis Show</p>
-        <a href="https://58nights.com" target="_blank">
-            <span>Produced by</span>
-            <img src="assets/58nights.png" alt="58Nights Media">
-            <span>58Nights Media, LLC</span>
-        </a>
+        <div class="footer-inner shell">
+            <span>&copy; 2026 The Adam Mattis Show</span>
+            <a class="producer" href="https://58nights.com" target="_blank" rel="noopener noreferrer"><span>Produced by</span><img src="assets/58nights.png" alt="58Nights Media"></a>
+        </div>
     </footer>
 </body>
 </html>

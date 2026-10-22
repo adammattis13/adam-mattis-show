@@ -170,3 +170,11 @@ footer { border-top: 1px solid var(--line); padding: 28px 0; }
     html { scroll-behavior: auto; }
     *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+.faq { border-top: 1px solid var(--line); background: var(--panel); }
+.faq-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; }
+.faq h2 { margin-top: 20px; }
+.faq details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+.faq summary { cursor: pointer; min-height: 44px; padding: 10px 0; font-size: .95rem; font-weight: 500; }
+.faq details p { padding: 8px 0 16px; color: var(--muted); font-size: .88rem; }
+@media (max-width: 720px) { .faq-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; } }

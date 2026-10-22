@@ -2,16 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self' https://www.googletagmanager.com; script-src-attr 'none'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://open.spotify.com; form-action 'none'; upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self' https://www.googletagmanager.com 'sha256-AC4JTJQiW1zYbLCEvU8sQsyOvMK9nMs90oKT0HWCisg='; script-src-attr 'none'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://open.spotify.com; form-action 'none'; upgrade-insecure-requests">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Good stories and hard-earned perspective with Adam Mattis. Explore conversations about business, leadership, and life, plus short Car Talk episodes for your next drive.">
+    <meta name="description" content="Listen to The Adam Mattis Show with Adam Mattis: conversations about business, leadership, and life, plus short Car Talk episodes. Find your first listen.">
     <meta name="theme-color" content="#090909">
-    <title>The Adam Mattis Show — Good stories. Hard-earned perspective.</title>
+    <title>The Adam Mattis Show | Business, Leadership &amp; Life Podcast</title>
     <meta property="og:title" content="The Adam Mattis Show">
     <meta property="og:description" content="Good stories. Hard-earned perspective. Conversations and quick Car Talk episodes with Adam Mattis.">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.theadammattisshow.com/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <meta property="og:url" content="https://www.theadammattisshow.com/">
+    <meta property="og:site_name" content="The Adam Mattis Show">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://www.theadammattisshow.com/assets/adam-recording.jpeg">
+    <meta property="og:image:width" content="921">
+    <meta property="og:image:height" content="921">
+    <meta property="og:image:alt" content="Adam Mattis recording The Adam Mattis Show">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Adam Mattis Show | Business, Leadership &amp; Life">
+    <meta name="twitter:description" content="Conversations about business, leadership, and life, plus short Car Talk episodes with Adam Mattis.">
+    <meta name="twitter:image" content="https://www.theadammattisshow.com/assets/adam-recording.jpeg">
+    <meta name="twitter:image:alt" content="Adam Mattis recording The Adam Mattis Show">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LPMFJTRBE5"></script>
     <script src="assets/analytics.js" defer></script>
@@ -19,6 +33,195 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/site.css">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.theadammattisshow.com/#website",
+      "url": "https://www.theadammattisshow.com/",
+      "name": "The Adam Mattis Show",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://www.theadammattisshow.com/#publisher"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.theadammattisshow.com/#webpage",
+      "url": "https://www.theadammattisshow.com/",
+      "name": "The Adam Mattis Show | Business, Leadership & Life Podcast",
+      "description": "Listen to The Adam Mattis Show with Adam Mattis: conversations about business, leadership, and life, plus short Car Talk episodes. Find your first listen.",
+      "isPartOf": {
+        "@id": "https://www.theadammattisshow.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://www.theadammattisshow.com/#podcast"
+      },
+      "about": [
+        {
+          "@id": "https://www.theadammattisshow.com/#adam-mattis"
+        },
+        {
+          "@id": "https://www.theadammattisshow.com/#podcast"
+        }
+      ],
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.theadammattisshow.com/#adam-mattis",
+      "name": "Adam Mattis",
+      "url": "https://www.adammattis.com/",
+      "description": "Consultant, creator, former television host, and host of The Adam Mattis Show."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.theadammattisshow.com/#publisher",
+      "name": "58Nights Media",
+      "url": "https://58nights.com/"
+    },
+    {
+      "@type": "PodcastSeries",
+      "@id": "https://www.theadammattisshow.com/#podcast",
+      "name": "The Adam Mattis Show",
+      "url": "https://www.theadammattisshow.com/",
+      "description": "Conversations about business, leadership, resilience, creativity, and life, plus short Car Talk episodes with Adam Mattis.",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://www.theadammattisshow.com/#adam-mattis"
+      },
+      "publisher": {
+        "@id": "https://www.theadammattisshow.com/#publisher"
+      },
+      "image": "https://www.theadammattisshow.com/assets/adam-recording.jpeg",
+      "sameAs": [
+        "https://open.spotify.com/show/3jeoIr2jjqOekjklIsbFDz",
+        "https://podcasts.apple.com/us/podcast/the-adam-mattis-show/id1870415107",
+        "https://www.youtube.com/@TheAdamMattisShow"
+      ],
+      "episode": [
+        {
+          "@id": "https://www.theadammattisshow.com/#start-here"
+        },
+        {
+          "@id": "https://www.theadammattisshow.com/#stop-blaming-leadership"
+        },
+        {
+          "@id": "https://www.theadammattisshow.com/#find-your-creative-outlet"
+        },
+        {
+          "@id": "https://www.theadammattisshow.com/#give-before-you-need"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.theadammattisshow.com/#questions",
+      "isPartOf": {
+        "@id": "https://www.theadammattisshow.com/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is The Adam Mattis Show?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Adam Mattis Show is a podcast hosted by Adam Mattis and produced by 58Nights Media. It explores business, leadership, resilience, creativity, and life through conversations and short solo episodes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Car Talk episodes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Car Talk episodes are short reflections recorded by Adam Mattis from behind the wheel. The selected episodes on this page run about three to four minutes and cover topics such as self-limiting beliefs, leadership, creativity, and relationships."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I listen to The Adam Mattis Show?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Listen and follow on Spotify or Apple Podcasts. You can also visit The Adam Mattis Show on YouTube. The links above take you directly to the show and selected episodes."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "PodcastEpisode",
+      "@id": "https://www.theadammattisshow.com/#start-here",
+      "url": "https://www.theadammattisshow.com/#start-here",
+      "name": "CT05: Self-Limiting Belief",
+      "datePublished": "2026-03-16",
+      "timeRequired": "PT4M",
+      "inLanguage": "en",
+      "partOfSeries": {
+        "@id": "https://www.theadammattisshow.com/#podcast"
+      },
+      "author": {
+        "@id": "https://www.theadammattisshow.com/#adam-mattis"
+      },
+      "sameAs": [
+        "https://podcasts.apple.com/us/podcast/id1870415107?i=1000755574478"
+      ]
+    },
+    {
+      "@type": "PodcastEpisode",
+      "@id": "https://www.theadammattisshow.com/#stop-blaming-leadership",
+      "url": "https://www.theadammattisshow.com/#stop-blaming-leadership",
+      "name": "CT04: Stop Blaming Leadership",
+      "datePublished": "2026-03-09",
+      "timeRequired": "PT4M",
+      "inLanguage": "en",
+      "partOfSeries": {
+        "@id": "https://www.theadammattisshow.com/#podcast"
+      },
+      "author": {
+        "@id": "https://www.theadammattisshow.com/#adam-mattis"
+      },
+      "sameAs": [
+        "https://podcasts.apple.com/us/podcast/id1870415107?i=1000754067605"
+      ]
+    },
+    {
+      "@type": "PodcastEpisode",
+      "@id": "https://www.theadammattisshow.com/#find-your-creative-outlet",
+      "url": "https://www.theadammattisshow.com/#find-your-creative-outlet",
+      "name": "CT03: Find Your Creative Outlet",
+      "datePublished": "2026-02-23",
+      "timeRequired": "PT3M",
+      "inLanguage": "en",
+      "partOfSeries": {
+        "@id": "https://www.theadammattisshow.com/#podcast"
+      },
+      "author": {
+        "@id": "https://www.theadammattisshow.com/#adam-mattis"
+      },
+      "sameAs": [
+        "https://podcasts.apple.com/us/podcast/id1870415107?i=1000751041247"
+      ]
+    },
+    {
+      "@type": "PodcastEpisode",
+      "@id": "https://www.theadammattisshow.com/#give-before-you-need",
+      "url": "https://www.theadammattisshow.com/#give-before-you-need",
+      "name": "CT02: Give Before You Need",
+      "datePublished": "2026-02-18",
+      "timeRequired": "PT3M",
+      "inLanguage": "en",
+      "partOfSeries": {
+        "@id": "https://www.theadammattisshow.com/#podcast"
+      },
+      "author": {
+        "@id": "https://www.theadammattisshow.com/#adam-mattis"
+      },
+      "sameAs": [
+        "https://podcasts.apple.com/us/podcast/id1870415107?i=1000750332904"
+      ]
+    }
+  ]
+}</script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -32,9 +235,9 @@
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-grid shell">
                 <div class="hero-copy">
-                    <p class="eyebrow">Business. Leadership. Life.</p>
+                    <p class="eyebrow">The Adam Mattis Show · A podcast</p>
                     <h1 id="hero-title">Good stories.<br><span>Hard-earned<br>perspective.</span></h1>
-                    <p class="hero-intro">Conversations that go somewhere. Adam Mattis gets into the experiences, decisions, and lessons that shape how we work and live.</p>
+                    <p class="hero-intro">Conversations about business, leadership, and life. Adam Mattis gets into the experiences, decisions, and lessons that shape how we work and live.</p>
                     <div class="actions">
                         <a class="button" href="#start-here"><span class="play-icon" aria-hidden="true">▶</span> Find your first listen</a>
                         <a class="text-link" href="#episodes">Explore episodes <span aria-hidden="true">↗</span></a>
@@ -83,16 +286,16 @@
             <div class="shell">
                 <div class="section-heading"><div><p class="eyebrow">A few more for the road</p><h2 id="episodes-title">Small listens.<br>Useful shifts.</h2></div><a class="text-link" href="https://open.spotify.com/show/3jeoIr2jjqOekjklIsbFDz" target="_blank" rel="noopener noreferrer">Browse the whole show <span aria-hidden="true">↗</span></a></div>
                 <div class="episode-list">
-                    <article class="episode-row"><span class="episode-number" aria-hidden="true">04</span><div class="episode-detail"><p class="episode-meta">Car Talk <span>4 min · March 9, 2026</span></p><h3><a href="https://podcasts.apple.com/us/podcast/ct04-stop-blaming-leadership/id1870415107?i=1000754067605" target="_blank" rel="noopener noreferrer">Stop Blaming Leadership</a></h3><p>See the pressures behind executive decisions and make a stronger case for change.</p></div><a class="episode-play" href="https://podcasts.apple.com/us/podcast/ct04-stop-blaming-leadership/id1870415107?i=1000754067605" target="_blank" rel="noopener noreferrer" aria-label="Listen to Stop Blaming Leadership on Apple Podcasts"><span aria-hidden="true">▶</span></a></article>
-                    <article class="episode-row"><span class="episode-number" aria-hidden="true">03</span><div class="episode-detail"><p class="episode-meta">Car Talk <span>3 min · February 23, 2026</span></p><h3><a href="https://podcasts.apple.com/us/podcast/ct03-find-your-creative-outlet/id1870415107?i=1000751041247" target="_blank" rel="noopener noreferrer">Find Your Creative Outlet</a></h3><p>Pick up the camera, write the page, make the thing. Creativity starts with doing.</p></div><a class="episode-play" href="https://podcasts.apple.com/us/podcast/ct03-find-your-creative-outlet/id1870415107?i=1000751041247" target="_blank" rel="noopener noreferrer" aria-label="Listen to Find Your Creative Outlet on Apple Podcasts"><span aria-hidden="true">▶</span></a></article>
-                    <article class="episode-row"><span class="episode-number" aria-hidden="true">02</span><div class="episode-detail"><p class="episode-meta">Car Talk <span>3 min · February 18, 2026</span></p><h3><a href="https://podcasts.apple.com/us/podcast/ct02-give-before-you-need/id1870415107?i=1000750332904" target="_blank" rel="noopener noreferrer">Give Before You Need</a></h3><p>Build relationships before you need a favor. Start with what you can give.</p></div><a class="episode-play" href="https://podcasts.apple.com/us/podcast/ct02-give-before-you-need/id1870415107?i=1000750332904" target="_blank" rel="noopener noreferrer" aria-label="Listen to Give Before You Need on Apple Podcasts"><span aria-hidden="true">▶</span></a></article>
+                    <article class="episode-row" id="stop-blaming-leadership"><span class="episode-number" aria-hidden="true">04</span><div class="episode-detail"><p class="episode-meta">Car Talk <span>4 min · March 9, 2026</span></p><h3><a href="https://podcasts.apple.com/us/podcast/ct04-stop-blaming-leadership/id1870415107?i=1000754067605" target="_blank" rel="noopener noreferrer">Stop Blaming Leadership</a></h3><p>See the pressures behind executive decisions and make a stronger case for change.</p></div><a class="episode-play" href="https://podcasts.apple.com/us/podcast/ct04-stop-blaming-leadership/id1870415107?i=1000754067605" target="_blank" rel="noopener noreferrer" aria-label="Listen to Stop Blaming Leadership on Apple Podcasts"><span aria-hidden="true">▶</span></a></article>
+                    <article class="episode-row" id="find-your-creative-outlet"><span class="episode-number" aria-hidden="true">03</span><div class="episode-detail"><p class="episode-meta">Car Talk <span>3 min · February 23, 2026</span></p><h3><a href="https://podcasts.apple.com/us/podcast/ct03-find-your-creative-outlet/id1870415107?i=1000751041247" target="_blank" rel="noopener noreferrer">Find Your Creative Outlet</a></h3><p>Pick up the camera, write the page, make the thing. Creativity starts with doing.</p></div><a class="episode-play" href="https://podcasts.apple.com/us/podcast/ct03-find-your-creative-outlet/id1870415107?i=1000751041247" target="_blank" rel="noopener noreferrer" aria-label="Listen to Find Your Creative Outlet on Apple Podcasts"><span aria-hidden="true">▶</span></a></article>
+                    <article class="episode-row" id="give-before-you-need"><span class="episode-number" aria-hidden="true">02</span><div class="episode-detail"><p class="episode-meta">Car Talk <span>3 min · February 18, 2026</span></p><h3><a href="https://podcasts.apple.com/us/podcast/ct02-give-before-you-need/id1870415107?i=1000750332904" target="_blank" rel="noopener noreferrer">Give Before You Need</a></h3><p>Build relationships before you need a favor. Start with what you can give.</p></div><a class="episode-play" href="https://podcasts.apple.com/us/podcast/ct02-give-before-you-need/id1870415107?i=1000750332904" target="_blank" rel="noopener noreferrer" aria-label="Listen to Give Before You Need on Apple Podcasts"><span aria-hidden="true">▶</span></a></article>
                 </div>
             </div>
         </section>
         <section class="about" id="about" aria-labelledby="about-title">
             <div class="shell about-grid">
                 <div><p class="eyebrow">Meet your host</p><h2 id="about-title">Adam Mattis.<br><span>Always curious.</span></h2></div>
-                <div class="about-copy"><p class="lead">A consultant, creator, and former television host who likes getting past the polished answer.</p><p>Adam brings experience in consulting and executive roles to conversations about business, leadership, resilience, and life. He’s interested in how people got here, what they’ve learned, and what the rest of us can take from it.</p><p>Sometimes that means settling in for a deep conversation. Sometimes it’s one practical thought recorded between the driveway and the next stop.</p><a class="text-link" href="https://www.adammattis.com/" target="_blank" rel="noopener noreferrer">More from Adam <span aria-hidden="true">↗</span></a></div>
+                <div class="about-copy" id="adam-mattis"><p class="lead">A consultant, creator, and former television host who likes getting past the polished answer.</p><p>Adam brings experience in consulting and executive roles to conversations about business, leadership, resilience, and life. He’s interested in how people got here, what they’ve learned, and what the rest of us can take from it.</p><p>Sometimes that means settling in for a deep conversation. Sometimes it’s one practical thought recorded between the driveway and the next stop.</p><a class="text-link" href="https://www.adammattis.com/" target="_blank" rel="noopener noreferrer">More from Adam <span aria-hidden="true">↗</span></a></div>
             </div>
             <div class="shell formats">
                 <a class="format-card" href="https://podcasts.apple.com/us/podcast/00-the-trailer/id1870415107?i=1000745836500" target="_blank" rel="noopener noreferrer"><div class="format-top"><span class="eyebrow">Settle in</span><span aria-hidden="true">↗</span></div><h3>The conversations</h3><p>Room for the whole story. Get to know the idea behind the show in the one-minute trailer.</p><span class="format-action">Hear the introduction <span aria-hidden="true">→</span></span></a>
@@ -106,6 +309,7 @@
                 <a class="platform" href="https://www.youtube.com/@TheAdamMattisShow" target="_blank" rel="noopener noreferrer"><img src="assets/youtube.png" width="24" height="24" alt="">YouTube <span aria-hidden="true">↗</span></a>
             </div></div><div class="spotify-frame"><iframe src="https://open.spotify.com/embed/show/3jeoIr2jjqOekjklIsbFDz?utm_source=generator&amp;theme=0" title="Listen to The Adam Mattis Show on Spotify" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe><p>Player not loading? <a href="https://open.spotify.com/show/3jeoIr2jjqOekjklIsbFDz" target="_blank" rel="noopener noreferrer">Open the show on Spotify <span aria-hidden="true">↗</span></a></p></div></div>
         </section>
+        <section class="faq" id="questions" aria-labelledby="questions-title"><div class="shell faq-grid"><div><p class="eyebrow">Before you press play</p><h2 id="questions-title">A little more<br>about the show.</h2></div><div class="faq-answers"><details><summary>What is The Adam Mattis Show?</summary><p>The Adam Mattis Show is a podcast hosted by Adam Mattis and produced by 58Nights Media. It explores business, leadership, resilience, creativity, and life through conversations and short solo episodes.</p></details><details><summary>What are Car Talk episodes?</summary><p>Car Talk episodes are short reflections recorded by Adam Mattis from behind the wheel. The selected episodes on this page run about three to four minutes and cover topics such as self-limiting beliefs, leadership, creativity, and relationships.</p></details><details><summary>Where can I listen to The Adam Mattis Show?</summary><p>Listen and follow on Spotify or Apple Podcasts. You can also visit The Adam Mattis Show on YouTube. The links above take you directly to the show and selected episodes.</p></details></div></div></section>
     </main>
     <footer><div class="footer-inner shell"><a class="footer-brand" href="#top">The Adam Mattis Show <span aria-hidden="true">↑</span></a><span>© 2026 The Adam Mattis Show</span><a class="producer" href="https://58nights.com" target="_blank" rel="noopener noreferrer"><span>Produced by</span><img src="assets/58nights.png" width="98" height="40" loading="lazy" alt="58Nights Media"></a></div></footer>
 </body>
